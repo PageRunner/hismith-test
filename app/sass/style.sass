@@ -1,0 +1,527 @@
+// COLOR
+$blue: #53565A
+$purple: #893b67
+$gray: #414141
+$l-gray: #ededed
+
+
+// FONTS
+
+$vida31: Vida31, sans-serif
+$vida33: Vida33, sans-serif
+
+
+@font-face
+	font-family: Vida31
+	src: url(../fonts/vida31pro.otf)
+	font-style: normal
+	font-weight: 300
+
+
+@font-face
+	font-family: Vida33
+	src: url(../fonts/vida33pro.otf)
+	font-style: normal
+	font-weight: 300
+
+
+body
+	font-family: $vida31
+	margin: 0
+	padding: 0
+
+.wrapper
+	width: 1280px
+	margin: 0 auto
+
+.header
+	height: 90px
+	padding-left: 40px
+	padding-right: 50px
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	.right-col,
+	.left-col
+		display: flex
+		align-items: center
+
+	.logo
+		width: 150px
+		margin-right: 33px
+
+	&-menu
+		width: 440px
+		padding: 0
+		list-style: none
+		display: flex
+		justify-content: space-between
+
+		.item
+			a
+				text-decoration: none
+				font-size: 14px
+				color: $purple
+	
+	.comparison
+		margin-right: 24px
+		font-size: 14px
+		color: $purple
+		cursor: pointer
+
+		&-icon
+			display: inline-block
+			position: relative
+			width: 18px
+			margin-right: 5px
+
+			.count
+				position: absolute
+				top: -12px
+				right: -8px
+				width: 16px
+				height: 16px
+				padding-top: 2px
+				font-size: 11px
+				box-sizing: border-box
+				color: #ffffff
+				background-color: $purple
+				border-radius: 50%
+				text-align: center
+
+
+	.login
+		position: relative
+		margin-right: 24px
+		padding-top: 8px
+		padding-bottom: 8px
+		padding-left: 14px
+		padding-right: 30px
+		border: 1px solid $l-gray
+		border-radius: 15px
+		cursor: pointer
+
+		&-title
+			font-size: 14px
+			color: $blue
+
+		&:after
+			position: absolute
+			right: 10px
+			top: 15px
+			content: ""
+			border: 5px solid transparent
+			border-top: 5px  solid #808080
+
+
+		
+	.phone
+		position: relative
+		margin-right: 66px
+
+		&-title
+			font-family: $vida33
+			font-size: 18px
+			color: $blue
+
+		&-icon
+			position: absolute
+			display: block
+			top: -10px
+			right: -55px
+			width: 35px
+			height: 35px
+			background-color: $purple
+			border-radius: 50%
+			background-image: url(../img/phone-icon.svg)
+			background-repeat: no-repeat
+			background-size: 16px
+			background-position: center center
+			box-shadow: 0 0 0 rgba(137,59,103, 0.4)
+			animation: pulse 2s infinite
+			cursor: pointer
+
+@-webkit-keyframes pulse
+	0%
+		-webkit-box-shadow: 0 0 0 0 rgba(137,59,103, 0.8)
+
+	70% 
+		-webkit-box-shadow: 0 0 0 10px rgba(137,59,103, 0)
+
+	100% 
+		-webkit-box-shadow: 0 0 0 0 rgba(137,59,103, 0)
+  
+
+@keyframes pulse 
+	0% 
+		-moz-box-shadow: 0 0 0 0 rgba(137,59,103, 0.8)
+		box-shadow: 0 0 0 0 rgba(137,59,103, 0.8)
+
+	70% 
+		-moz-box-shadow: 0 0 0 10px rgba(137,59,103, 0)
+		box-shadow: 0 0 0 10px rgba(137,59,103, 0);
+
+	100% 
+		-moz-box-shadow: 0 0 0 0 rgba(137,59,103, 0)
+		box-shadow: 0 0 0 0 rgba(137,59,103, 0)
+
+
+
+
+
+.project-image
+	height: 232px
+	background-image: url(../img/bg.jpg)
+	background-repeat: no-repeat
+	background-position: center center
+
+	.wrapper
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		align-items: flex-start
+		align-content: flex-start
+		flex-wrap: wrap
+
+	.adress
+		padding-top: 15px
+		padding-left: 20px
+		padding-right: 20px
+		background-color: #ffffff
+		text-align: center
+		color: #777B80
+		font-size: 18px
+		font-family: $vida33
+
+	.object-number
+		padding-left: 20px
+		padding-right: 40px
+		padding-top: 5px
+		background-color: #ffffff
+		text-align: left
+		font-family: $vida33
+		font-size: 48px
+		color: #414141
+
+
+.page-content
+	padding-top: 64px
+	padding-bottom: 80px
+	display: flex
+	justify-content: space-between
+
+.content
+	width: 875px
+
+.sidebar
+	width: 350px
+	border-right: 1px solid $l-gray
+
+	&-menu
+		margin: 0
+		margin-bottom: 28px
+		padding: 0
+		padding-right: 70px
+		list-style: none
+
+		.item
+			display: block
+			position: relative
+			margin-bottom: 14px
+			padding-left: 20px
+			border: 1px solid transparent
+			border-radius: 20px
+
+			a
+				display: block
+				padding-top: 12px
+				padding-bottom: 12px
+				text-decoration: none
+				font-size: 16px
+				color: purple
+
+			.count
+				display: block
+				width: 20px
+				height: 17px
+				padding-top: 3px
+				position: absolute
+				top: -5px
+				right: -5px
+				background-color: $purple
+				font-family: $vida33
+				font-size: 13px
+				text-align: center
+				color: #ffffff
+				border-radius: 100%
+				opacity: 0
+
+			&:hover
+				border-color: $l-gray
+
+				a
+					color: $blue
+
+				.count
+					opacity: 1
+			
+			&.active
+				border-color: $l-gray
+
+				a
+					color: $blue
+
+				.count
+					opacity: 1
+			
+
+
+		
+		.item:last-child
+			margin-bottom: 0
+
+
+	.project-container
+		padding-left: 20px
+		padding-right: 25px
+
+		.project
+			position: relative
+			padding-top: 40px
+			padding-bottom: 40px
+			border-top: 1px solid $l-gray
+
+			&-title
+				display: block
+				margin-bottom: 15px
+				font-family: $vida33
+				font-size: 24px
+				color: $purple
+			
+			&-desc
+				margin: 0
+				font-size: 16px
+
+			&-link
+				display: block
+				position: absolute
+				right: 0
+				bottom: 40px
+				padding-right: 30px
+				text-decoration: none
+				font-family: $vida33
+				font-size: 14px
+				color: $purple
+
+				i
+					display: inline-block
+					width: 20px
+					height: 20px
+					margin-left: 8px
+					padding-top: 2px
+					border: 1px solid $purple
+					border-radius: 50%
+					box-sizing: border-box
+					text-align: center
+
+				&:hover i
+					background-color: $purple
+					color: #fff
+
+.content
+
+	&-title
+		margin-top: 0
+		margin-bottom: 40px
+		font-family: $vida33
+		font-size: 36px
+		font-weight: 300
+		color: $gray
+
+
+.news
+	position: relative
+	margin-bottom: 24px
+	padding-top: 23px
+	padding-left: 24px
+	padding-right: 100px
+	border: 1px solid $l-gray
+	border-radius: 10px
+
+	&-date
+		padding: 5px
+		font-size: 16px
+		background-color: $l-gray
+		border-radius: 2px
+
+	&-title
+		margin-top: 25px
+		margin-bottom: 20px
+		font-family: $vida33
+		font-size: 18px
+		font-weight: 300
+
+	&-content
+		margin-bottom: 20px
+		display: none
+
+	&.active
+		background-color: #fcfcfc
+
+		.news-content
+			display: block
+
+		.news-toggle
+			background-color: $purple
+			border-color: $purple
+
+			i
+				color: #ffffff
+	
+	&-toggle
+		position: absolute
+		top: 45px
+		right: 30px
+		width: 24px
+		height: 24px
+		padding-top: 2px
+		border: 2px solid $l-gray
+		border-radius: 50%
+		text-align: center
+		box-sizing: border-box
+
+		i
+			color:  $l-gray
+
+		&:hover
+			background-color: $purple
+			border-color: $purple
+			cursor: pointer
+
+			i
+				color:  #ffffff
+
+
+.aside
+	padding-top: 30px
+	padding-bottom: 48px
+	background-color: #edeeee
+
+	.wrapper
+		display: flex
+		justify-content: space-between
+
+.other-news
+	width: 230px
+
+	&-date
+		font-size: 14px
+
+	&-text
+		font-size: 14px
+		margin-bottom: 0
+		margin-top: 10px
+
+	&-type
+		height: 16px
+		padding: 4px
+		font-size: 10px
+		background-color: #ffffff
+		text-align: center
+		text-transform: uppercase
+
+		&.action
+			margin-left: 10px
+			position: relative
+			font-family: $vida33
+			background-color: #c5e71b
+
+			&:after
+				position: absolute
+				right: -8px
+				top: 0
+				content: ""
+				border: 9.5px solid transparent
+				border-top: 9.5px  solid #c5e71b
+				border-bottom: 9.5px  solid #c5e71b
+				border-left: 5px solid #c5e71b
+				border-right: 5px solid transparent
+
+			&:before
+				position: absolute
+				left: -8px
+				top: 0
+				content: ""
+				border: 9.5px solid transparent
+				border-top: 9.5px  solid #c5e71b
+				border-bottom: 9.5px  solid #c5e71b
+				border-right: 5px solid #c5e71b
+				border-left: 5px solid transparent
+
+.footer
+	padding-top: 40px
+	padding-bottom: 40px
+	display: flex
+	justify-content: space-between
+
+
+	.address
+		font-style: normal
+
+		&-phone
+			font-family: $vida33
+			font-size: 24px
+			color: $gray
+			text-decoration: none
+
+		&-email
+			font-size: 14px
+			color: $purple
+			text-decoration: none
+
+		p
+			margin-bottom: 5px
+
+	&-menu
+		list-style: none
+		margin: 0
+		padding: 0
+		display: flex
+		justify-content: space-between
+
+		.menu-item
+			margin-right: 90px
+			font-size: 14px
+			font-family: $vida33
+	
+	&-sub-menu
+		list-style: none
+		margin: 0
+		margin-top: 20px
+		padding: 0
+
+		.sub-menu-item
+			display: block
+			margin-bottom: 12px
+
+
+		a
+			text-decoration: none
+			font-size: 14px
+			color: $purple
+			font-family: $vida31
+
+			&:hover
+				color: $gray
+
+.social-icon
+	width: 170px
+	margin-left: 10px
+	margin-bottom: 40px
+	display: flex
+	justify-content: space-between
+
+	a
+		color: $purple
