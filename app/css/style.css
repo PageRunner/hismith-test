@@ -45,9 +45,6 @@ body {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-  .header .logo {
-    width: 150px;
-    margin-right: 33px; }
   .header-menu {
     width: 440px;
     padding: 0;
@@ -137,6 +134,38 @@ body {
       -webkit-animation: pulse 2s infinite;
               animation: pulse 2s infinite;
       cursor: pointer; }
+  .header .btn-menu {
+    color: #252525;
+    padding: 5px;
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: left .23s;
+    -o-transition: left .23s;
+    transition: left .23s;
+    z-index: 11;
+    width: 25px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    display: none; }
+  .header .btn-menu span {
+    display: block;
+    height: 3px;
+    background-color: #893b67;
+    margin: 5px 0 0;
+    -webkit-transition: all .1s linear .23s;
+    -o-transition: all .1s linear .23s;
+    transition: all .1s linear .23s;
+    position: relative; }
+  .header.active .btn-menu span.first {
+    -webkit-transform: rotate(45deg);
+    top: 4px; }
+  .header.active .btn-menu span.second {
+    opacity: 0; }
+  .header.active .btn-menu span.third {
+    -webkit-transform: rotate(-45deg);
+    top: -12px; }
 
 @-webkit-keyframes pulse {
   0% {
@@ -275,48 +304,49 @@ body {
           opacity: 1; }
     .sidebar-menu .item:last-child {
       margin-bottom: 0; }
-  .sidebar .project-container {
-    padding-left: 20px;
-    padding-right: 25px; }
-    .sidebar .project-container .project {
-      position: relative;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      border-top: 1px solid #ededed; }
-      .sidebar .project-container .project-title {
-        display: block;
-        margin-bottom: 15px;
-        font-family: Vida33, sans-serif;
-        font-size: 24px;
-        color: #893b67; }
-      .sidebar .project-container .project-desc {
-        margin: 0;
-        font-size: 16px; }
-      .sidebar .project-container .project-link {
-        display: block;
-        position: absolute;
-        right: 0;
-        bottom: 40px;
-        padding-right: 30px;
-        text-decoration: none;
-        font-family: Vida33, sans-serif;
-        font-size: 14px;
-        color: #893b67; }
-        .sidebar .project-container .project-link i {
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          margin-left: 8px;
-          padding-top: 2px;
-          border: 1px solid #893b67;
-          -webkit-border-radius: 50%;
-                  border-radius: 50%;
-          -webkit-box-sizing: border-box;
-                  box-sizing: border-box;
-          text-align: center; }
-        .sidebar .project-container .project-link:hover i {
-          background-color: #893b67;
-          color: #fff; }
+
+.project-container {
+  padding-left: 20px;
+  padding-right: 25px; }
+  .project-container .project {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 1px solid #ededed; }
+    .project-container .project-title {
+      display: block;
+      margin-bottom: 15px;
+      font-family: Vida33, sans-serif;
+      font-size: 24px;
+      color: #893b67; }
+    .project-container .project-desc {
+      margin: 0;
+      font-size: 16px; }
+    .project-container .project-link {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 40px;
+      padding-right: 30px;
+      text-decoration: none;
+      font-family: Vida33, sans-serif;
+      font-size: 14px;
+      color: #893b67; }
+      .project-container .project-link i {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-left: 8px;
+        padding-top: 2px;
+        border: 1px solid #893b67;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        text-align: center; }
+      .project-container .project-link:hover i {
+        background-color: #893b67;
+        color: #fff; }
 
 .content-title {
   margin-top: 0;
@@ -476,6 +506,8 @@ body {
       margin-right: 90px;
       font-size: 14px;
       font-family: Vida33, sans-serif; }
+      .footer-menu .menu-item i {
+        display: none; }
   .footer-sub-menu {
     list-style: none;
     margin: 0;

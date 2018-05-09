@@ -47,10 +47,6 @@ body
 		display: flex
 		align-items: center
 
-	.logo
-		width: 150px
-		margin-right: 33px
-
 	&-menu
 		width: 440px
 		padding: 0
@@ -141,6 +137,41 @@ body
 			box-shadow: 0 0 0 rgba(137,59,103, 0.4)
 			animation: pulse 2s infinite
 			cursor: pointer
+
+	.btn-menu 
+		color: #252525
+		padding: 5px
+		position: absolute
+		top: 22px
+		right: 10px
+		cursor: pointer
+		transition: left .23s
+		z-index: 11
+		width: 25px
+		-webkit-transform: translateZ(0)
+		-webkit-backface-visibility: hidden
+		display: none
+
+	.btn-menu span 
+		display: block
+		height: 3px
+		background-color: $purple
+		margin: 5px 0 0
+		transition: all .1s linear .23s
+		position: relative
+
+
+	&.active .btn-menu span.first
+		-webkit-transform: rotate(45deg)
+		top: 4px
+
+	&.active .btn-menu span.second
+		opacity: 0
+
+	&.active .btn-menu span.third
+		-webkit-transform: rotate(-45deg)
+		top: -12px
+
 
 @-webkit-keyframes pulse
 	0%
@@ -277,58 +308,56 @@ body
 					opacity: 1
 			
 
-
-		
 		.item:last-child
 			margin-bottom: 0
 
 
-	.project-container
-		padding-left: 20px
-		padding-right: 25px
+.project-container
+	padding-left: 20px
+	padding-right: 25px
 
-		.project
-			position: relative
-			padding-top: 40px
-			padding-bottom: 40px
-			border-top: 1px solid $l-gray
+	.project
+		position: relative
+		padding-top: 40px
+		padding-bottom: 40px
+		border-top: 1px solid $l-gray
 
-			&-title
-				display: block
-				margin-bottom: 15px
-				font-family: $vida33
-				font-size: 24px
-				color: $purple
-			
-			&-desc
-				margin: 0
-				font-size: 16px
+		&-title
+			display: block
+			margin-bottom: 15px
+			font-family: $vida33
+			font-size: 24px
+			color: $purple
+		
+		&-desc
+			margin: 0
+			font-size: 16px
 
-			&-link
-				display: block
-				position: absolute
-				right: 0
-				bottom: 40px
-				padding-right: 30px
-				text-decoration: none
-				font-family: $vida33
-				font-size: 14px
-				color: $purple
+		&-link
+			display: block
+			position: absolute
+			right: 0
+			bottom: 40px
+			padding-right: 30px
+			text-decoration: none
+			font-family: $vida33
+			font-size: 14px
+			color: $purple
 
-				i
-					display: inline-block
-					width: 20px
-					height: 20px
-					margin-left: 8px
-					padding-top: 2px
-					border: 1px solid $purple
-					border-radius: 50%
-					box-sizing: border-box
-					text-align: center
+			i
+				display: inline-block
+				width: 20px
+				height: 20px
+				margin-left: 8px
+				padding-top: 2px
+				border: 1px solid $purple
+				border-radius: 50%
+				box-sizing: border-box
+				text-align: center
 
-				&:hover i
-					background-color: $purple
-					color: #fff
+			&:hover i
+				background-color: $purple
+				color: #fff
 
 .content
 
@@ -495,6 +524,9 @@ body
 			margin-right: 90px
 			font-size: 14px
 			font-family: $vida33
+
+			i
+				display: none
 	
 	&-sub-menu
 		list-style: none

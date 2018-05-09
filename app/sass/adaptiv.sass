@@ -1,0 +1,225 @@
+// COLOR
+$blue: #53565A
+$purple: #893b67
+$gray: #414141
+$l-gray: #ededed
+
+@media only screen and (max-width: 769px)
+	
+	.wrapper
+		width: 688px
+
+	.header
+		&.active
+			height: auto
+			padding-top: 20px
+			padding-bottom: 60px
+			box-sizing: border-box
+			flex-direction: column
+			align-items: flex-start
+
+			.left-col
+				flex-direction: column 
+				align-items: flex-start
+				margin-bottom: 120px
+			
+				.header-nav
+					display: block
+					margin-top: 120px
+
+				.header-menu
+					width: 100%
+					flex-direction: column
+
+					.item
+						margin-bottom: 40px
+
+			.right-col
+				flex-direction: column
+				align-items: flex-start
+
+
+				.comparison,
+				.login
+					display: block
+					margin: 0
+
+				.comparison
+					margin-bottom: 50px
+
+				.login
+					margin-bottom: 80px
+					padding: 0
+					border: none
+
+					&-title
+						color: $purple
+
+					&:after
+						display: none
+		
+		.btn-menu
+			display: block				
+
+
+
+				
+		.left-col
+			.header-nav
+				display: none
+
+		.right-col
+			.comparison,
+			.login
+				display: none
+
+
+	.project-image
+		.adress
+			font-size: 18px
+
+		.object-number
+			font-size: 32px
+
+	
+	.page-content
+		flex-wrap: wrap
+
+	.sidebar
+		width: 100%
+		border: none
+
+		&-menu
+			position: relative
+			padding: 0
+
+			&:after
+				position: absolute
+				right: 20px
+				top: 45%
+				content: ""
+				border: 5px solid transparent
+				border-top: 5px  solid #808080
+
+			.item
+				padding-top: 12px
+				padding-bottom: 12px
+				display: none
+
+				&.active
+					display: block
+
+					a
+						position: relative
+						display: inline
+
+					.count
+						top: -10%
+						right: -20%
+
+	.project-container
+		position: relative
+		display: flex
+		justify-content: space-between
+		padding: 0
+		padding-top: 40px
+		padding-bottom: 80px
+
+		&:after
+			content: " "
+			position: absolute
+			width: 1px
+			height: 35%
+			background-color: $l-gray
+			margin: auto
+			top: 40px
+			left: 0
+			right: 0
+
+		.project
+			width: 305px
+			padding: 0
+			border: none
+
+			&-link
+				padding-right: 0
+				bottom: 0
+
+	.content
+		width: 100%
+
+
+	.aside
+		
+		.other-news
+			width: 200px
+
+			&:last-child
+				display: none
+
+
+	.footer
+		&-menu
+			flex-wrap: wrap
+			width: 280px
+			margin-right: 70px
+
+		.menu-item
+			margin-right: 0
+			margin-bottom: 50px
+
+
+
+
+@media only screen and (max-width: 641px)
+	
+	.wrapper
+		width: 87.5%
+
+	.project-image
+		.wrapper
+			display: none
+
+	
+	.project-container
+		.project
+			width: 40%
+
+	.aside
+		.other-news
+			width: 100%
+			display: none
+
+			&:first-child
+				display: block
+
+			&-text
+				font-size: 22px
+
+
+	.footer
+		flex-direction: column
+
+		&-menu
+			width: 100%
+			margin: 0
+			margin-top: 40px
+
+		.menu-item
+			position: relative
+			width: 100%
+			margin-bottom: 16px
+			padding-bottom: 16px
+			border-bottom: 1px solid $l-gray
+
+			i
+				display: block
+				position: absolute
+				margin: auto
+				top: 0
+				botoom: 0
+				right: 20px
+
+
+		.footer-sub-menu
+			display: none
